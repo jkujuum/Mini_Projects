@@ -217,7 +217,7 @@ WHERE memid <> 0
 
 SELECT f.facid,
        EXTRACT(MONTH from starttime) month, 
-       COUNT(*)
+       COUNT(bookid)
 FROM Facilities AS f
      LEFT JOIN Bookings AS b
             ON f.facid = b.facid
